@@ -7,8 +7,8 @@ pipeline {
         stage('fetching'){
             steps {
                 sh 'echo "fetching"'
-                checkout ('https://github.com/eran8888/requests.git')
-               
+                git clone 'https://github.com/eran8888/requests.git'
+            
             }
 
         }
