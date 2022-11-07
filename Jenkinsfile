@@ -16,14 +16,18 @@ pipeline {
         }
         stage('build') {
             steps{
-                sh 'echo "building"'
+                sh '''
+                echo "building"
                 python http_e.py
+                '''
             }
         }
         stage('testing') {
             steps{
-                sh 'echo "testing"'
-                python TestRest.py    
+                sh '''
+                echo "testing"
+                python TestRest.py
+                '''  
                 
                 }
             }
