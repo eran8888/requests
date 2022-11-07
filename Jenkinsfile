@@ -5,8 +5,10 @@ pipeline {
     stages {
         stage('fetching') {
             steps {
-                sh 'echo "fetching"'
-                git clone 'https://github.com/eran8888/requests.git'
+                sh '''
+                 'echo "fetching"'
+                  git clone 'https://github.com/eran8888/requests.git'
+                  '''
             
             }
 
