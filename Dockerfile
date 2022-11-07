@@ -2,7 +2,7 @@
 # ---- builder
 #
 
-# FROM ubuntu:16.04 AS builder
+FROM ubuntu:16.04 AS builder
 
 # # install the prerequisites
 RUN apt-get update && apt-get install -y python3 python3-pip
@@ -43,13 +43,13 @@ CMD python3 -m pytest -v --junit-xml /srv/test_results.xml some_module_test.py
 #
 
 # to build (-t is image name, -f is Dockerfile path, . is the context folder)
-docker build -t test_some_module -f Dockerfile .
+#docker build -t test_some_module -f Dockerfile .
 
 # to run (-it is interactive terminal for colours etc, --name is the container nane, test_some_module is the image name)
-docker run -it --name test_some_module test_some_module
+#docker run -it --name test_some_module test_some_module
 
 # to get the results (test_some_module:/srv/test_results.xml is the container path, ./test_results.xml is the local path)
-docker cp test_some_module:/srv/test_results.xml ./test_results.xml
+#docker cp test_some_module:/srv/test_results.xml ./test_results.xml
 
 # to remove the container (not the image)
-docker rm -f test_some_module
+#docker rm -f test_some_module
