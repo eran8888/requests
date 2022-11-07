@@ -1,14 +1,15 @@
 pipeline {
-    agent any 
+    agent any
+    environment{
+        cloneRepo = 'https://github.com/eran8888/requests.git'
+    }
     
 
     stages {
         stage('fetching') {
             steps {
-                sh '''
-                 'echo "fetching"'
-                  git clone 'https://github.com/eran8888/requests.git'
-                  '''
+                sh 'echo "fetching"'
+                  
             
             }
 
