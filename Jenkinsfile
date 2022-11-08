@@ -14,10 +14,9 @@ pipeline {
         }
         stage('build') {
             steps{
-                sh '''
-                echo "building"
-                python http_e.py
-                '''
+                sh 'echo "building"'
+                sh 'python http_e.py'
+                
             }
         }
         stage('testing') {
