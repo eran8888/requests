@@ -21,11 +21,8 @@ pipeline {
         }
         stage('testing') {
             steps{
-                sh '''
-                echo "testing"
-                pytest TestRest.py
-                '''  
-                
+                sh 'pytest TestRest.py'
+                               
                 }
             }
        
