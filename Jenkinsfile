@@ -29,7 +29,7 @@ pipeline {
         }
         post{
             success{
-                sh 'docker build -t requestFromJenkins'
+                sh 'docker build -t requestFromJenkins .'
             }
         }
 }
