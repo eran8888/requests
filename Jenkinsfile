@@ -23,7 +23,7 @@ pipeline {
             steps{
                 sh '''
                 echo "testing"
-                python TestRest.py
+                python3 TestRest.py
                 '''  
                 
                 }
