@@ -15,7 +15,7 @@ pipeline {
         stage('build') {
             steps{
                 sh 'echo "building"'
-                sh 'python http_e.py'
+                sh 'python3 http_e.py'
                 
             }
         }
